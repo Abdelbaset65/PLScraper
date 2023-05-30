@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} Add Review {% endblock %}
+{% block content %}
+<p>Add a Review</p>
+<form action="#" method="post">
+    <p>Match Home Team</p>
+    <p><input type = "text" name = "HTeam"></p>
+    <p>Match Away Team</p>
+    <p><input type = "text" name = "ATeam"></p>
+    <p>Match Date</p>
+    <p><input type="text" name="MDate"></p>
+    <p>Rating</p>
+    <p><input type = "number" name = "rating"></p>
+    <p>Your Textual Description</p>
+    <p><input type = "text" name = "textual_review"></p>
+    <p><input type = "submit" value="submit"></p>
+</form>
+    <li><a href="{{ url_for('Match', MDate = MDate, HTeam = HTeam, ATeam = ATeam) }}">Back</a></li>
+{% endblock %}
